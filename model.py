@@ -53,7 +53,7 @@ def basic_block (input):
     return add([bottle_neck, input])
 
 
-def build_model(input_shape,residual_blocks_count = 21):
+def build_model(input_shape,residual_blocks_count = 16):
 
     input = Input(shape=input_shape)
     conv1 = Conv2D(filters=64, kernel_size = 9, kernel_initializer= "he_normal", padding="same", kernel_regularizer=l2(1.e-4), activation="relu")(input)

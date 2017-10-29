@@ -6,12 +6,12 @@ def read_dataset(root_path, hr_train_folder, hr_val_folder,lr_train_folder,lr_va
     train_path = os.path.join(root_path, hr_train_folder, "*.png")
     hr_train_files = glob.glob(train_path)
     hr_train_files.sort()
-    hr_train_files = hr_train_files[0:5]
+    #hr_train_files = hr_train_files[0:5]
 
     val_path = os.path.join(root_path, hr_val_folder, "*.png")
     hr_val_files = glob.glob(val_path)
     hr_val_files.sort()
-    hr_val_files = hr_val_files[0:5]
+    #hr_val_files = hr_val_files[0:5]
 
 
     hr_train = [np.array(Image.open(f)) for f in hr_train_files]
@@ -22,12 +22,12 @@ def read_dataset(root_path, hr_train_folder, hr_val_folder,lr_train_folder,lr_va
     train_path = os.path.join(root_path, lr_train_folder, "*.png")
     lr_train_files = glob.glob(train_path)
     lr_train_files.sort()
-    lr_train_files = lr_train_files[0:5]
+    #lr_train_files = lr_train_files[0:5]
 
     val_path = os.path.join(root_path, lr_val_folder, "*.png")
     lr_val_files = glob.glob(val_path)
     lr_val_files.sort()
-    lr_val_files = lr_val_files[0:5]
+    #lr_val_files = lr_val_files[0:5]
 
     lr_train = [np.array(Image.open(f)) for f in lr_train_files]
 
